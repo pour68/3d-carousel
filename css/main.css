@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.carousel__content {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rounding 20s linear infinite;
+}
+
+.carousel__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+}
+
+.carousel__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes rounding {
+    from {
+        transform: perspective(1000px) rotateY(0);
+    }
+
+    to {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
