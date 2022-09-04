@@ -15,8 +15,8 @@
 
 .carousel__list {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 175px;
+    height: 175px;
     transform-style: preserve-3d;
     animation: rounding 20s linear infinite;
 }
